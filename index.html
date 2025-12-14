@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internship Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      background-color: #f8fafc;
+    }
+
+    /* NAVBAR */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(8px);
+      transition: all 0.4s ease;
+      z-index: 1000;
+    }
+
+    header.scrolled {
+      background: #0f172a;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 60px;
+    }
+
+    .logo {
+      color: #e2e8f0;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #e5e7eb;
+      font-size: 16px;
+      padding: 8px 14px;
+      border-radius: 30px;
+      position: relative;
+      transition: all 0.35s ease;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #38bdf8;
+      left: 50%;
+      bottom: 0;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover::after {
+      width: 60%;
+      left: 20%;
+    }
+
+    .nav-links li a:hover {
+      color: #38bdf8;
+    }
+
+    header.scrolled .nav-links li a:hover {
+      color: #22c55e;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #e5e7eb;
+      padding: 100px 20px 20px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 20px;
+      animation: fadeDown 1.2s ease;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 650px;
+      margin: auto;
+      color: #cbd5f5;
+      animation: fadeUp 1.2s ease;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 32px;
+      border-radius: 30px;
+      background: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #22c55e;
+      color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 60px;
+    }
+
+    .section-light {
+      background: #f8fafc;
+    }
+
+    .section-dark {
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 34px;
+    }
+
+    p {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      font-size: 17px;
+      color: #475569;
+    }
+
+    .section-dark p {
+      color: #cbd5e1;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 15px 25px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      section {
+        padding: 80px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="navbar">
+    <nav>
+      <div class="logo">My Internship</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h1>Internship Portfolio</h1>
+      <p>
+        A modern, responsive, and interactive landing page designed with classic
+        colors and smooth user experience.
+      </p>
+      <a href="#about" class="btn">Explore More</a>
+    </div>
+  </section>
+
+  <section class="section-light" id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a dedicated learner exploring web development. This landing page
+      demonstrates fixed navigation, scroll interaction, and elegant UI design
+      suitable for internship submissions.
+    </p>
+  </section>
+
+  <section class="section-dark" id="skills">
+    <h2>Skills</h2>
+    <p>
+      HTML • CSS • JavaScript • Responsive Design • UI/UX Fundamentals
+    </p>
+  </section>
+
+  <section class="section-light" id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: rohankumar48187@gmail.com<br />
+    </p>
+  </section>
+
+  <footer>
+    © 2025 My Internship Project | Designed with Classic UI
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
